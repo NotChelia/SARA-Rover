@@ -1,0 +1,33 @@
+# ROS build and install directories
+build/
+devel/
+install/
+log/
+
+# Compiled Object files
+*.o
+*.so
+*.a
+*.pyc
+*.pyo
+__pycache__/
+
+# Temporary files
+*~
+*.swp
+*.swo
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# ROS specific
+.catkin_workspace
+.catkin_tools/
+
+# No embedded git repositories to exclude
