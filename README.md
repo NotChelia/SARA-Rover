@@ -1,6 +1,6 @@
-# Lidar Exploration System
+# SARA Rover (Search and Rescue Autonomous Rover)
 
-This repository contains a complete system for LiDAR-based exploration and mapping, built on ROS. It integrates several key components:
+This repository contains a complete system for LiDAR-based exploration and mapping, built on ROS Noetic and ROS Foxy using the following:
 
 ## Components
 
@@ -23,9 +23,4 @@ Custom autonomous exploration implementation, including:
 
 The repository includes several shell scripts to simplify operation:
 - `run_exploration_system_new.sh`: Launches the complete exploration system
-- `robust_bridge.sh`: Provides communication between different ROS components
 - `check_exploration_topics.sh` and `check_topics.sh`: Utility scripts for debugging
-
-## Setup
-
-Please refer to the individual component READMEs for detailed setup instructions.
