@@ -1,7 +1,8 @@
 # SARA Rover (Search and Rescue Autonomous Rover)
 
-This repository contains a complete system for LiDAR-based exploration and mapping, built on ROS Noetic and ROS Foxy using the following:
+![](https://github.com/NotChelia/SARA-Rover/blob/master/demo.gif)
 
+This repository contains a complete system for LiDAR-based exploration and mapping, built on ROS Noetic and ROS Foxy using the following:
 ## Components
 
 ### 1. catkin_point_lio_unilidar
