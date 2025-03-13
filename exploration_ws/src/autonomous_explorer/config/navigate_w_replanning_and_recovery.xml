@@ -1,0 +1,11 @@
+<!--
+  This is a minimal Behavior Tree for navigation that only uses the most basic nodes.
+-->
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="NavigateWithRecovery">
+      <ComputePathToPose goal="{goal}" path="{path}" planner_id="SmacPlanner"/>
+      <FollowPath path="{path}" controller_id="FollowPath"/>
+    </Sequence>
+  </BehaviorTree>
+</root>
