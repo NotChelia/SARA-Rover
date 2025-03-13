@@ -26,6 +26,8 @@ find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 find_package(angles REQUIRED)
+find_package(rclcpp_action REQUIRED)
+find_package(nav2_msgs REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -39,18 +41,9 @@ include_directories(
   ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-add_executable(exploration_node src/exploration_node.cpp)
 add_executable(exploration_node_new src/exploration_node_new.cpp)
-
-ament_target_dependencies(exploration_node
-  rclcpp
-  nav_msgs
-  sensor_msgs
-  geometry_msgs
-  visualization_msgs
-  tf2
-  tf2_ros
-)
+add_executable(exploration_node_nav2 src/exploration_node_nav2.cpp)
+add_executable(cmd_vel_mux src/cmd_vel_mux.cpp)
 
 ament_target_dependencies(exploration_node_new
   rclcpp
@@ -64,9 +57,30 @@ ament_target_dependencies(exploration_node_new
   angles
 )
 
+ament_target_dependencies(exploration_node_nav2
+  rclcpp
+  nav_msgs
+  sensor_msgs
+  geometry_msgs
+  visualization_msgs
+  tf2
+  tf2_ros
+  tf2_geometry_msgs
+  angles
+  rclcpp_action
+  nav2_msgs
+)
+
+ament_target_dependencies(cmd_vel_mux
+  rclcpp
+  geometry_msgs
+  sensor_msgs
+)
+
 install(TARGETS
-  exploration_node
   exploration_node_new
+  exploration_node_nav2
+  cmd_vel_mux
   DESTINATION lib/${PROJECT_NAME}
 )
 
